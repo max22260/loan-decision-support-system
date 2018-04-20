@@ -10,7 +10,7 @@ import java.util.HashMap;
 
 /**
  *
- * @author moh
+ * @author virus
  */
 public class Classifier {
     
@@ -33,7 +33,7 @@ public class Classifier {
         }
       // double value = FetHashMap.get(Element);
        
-        
+       //  System.out.println(Feature +"with yes "+ value );
         return value;
     }
     
@@ -52,6 +52,8 @@ public class Classifier {
             value = 1;
         }
         
+        
+       // System.out.println(Feature +"with no "+ value );
         return value;
     }
     

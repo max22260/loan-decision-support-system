@@ -6,6 +6,7 @@
 package loan;
 
 import static java.lang.Thread.sleep;
+import java.util.List;
 
 
 /**
@@ -21,17 +22,51 @@ public class Loan {
 
     Gui g  =new Gui();    
   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   /* ********************** Test  **************************
+   
+    
+   FileReader F = new FileReader("/home/max/Desktop/new.csv");
     
     FeatureProbability f = new FeatureProbability();
-    Facade fa = new Facade("yes", "job");
+    Facade fa = new Facade("yes", "age");
+    // F.readCsvFile();
     
-    
-    
-    f.getProbabilityWithYes("job");
-    f.getProbabilityWithnNo("job");
-   System.out.println(fa.countAllYes());
-    System.out.println(f.getProbabilityWithYes("job")+" "+ f.getProbabilityWithnNo("job")+ "  yes  " + f.probabilityOfYes() +"no" + f.probabilityOfNO()  );
+     List<DataSet> list =   F.readCsvFile(); 
+     
+     
+     
+     for(int i =0 ; i < list.size() ;i++ )
+     System.out.println(list.get(i).job);
+     
+     
+     Features sm = new Features(list, "job");
+    // System.out.println(sm.countAllNo());
+      //  System.out.println(sm.countAllYes());
+        
+        System.out.println(f.counter);
+        //System.out.println(fa.countAllNo());
+        
+        //ystem.out.println(f.getProbabilityWithnNo("job"));
+        
+  //  f.getProbabilityWithYes("job");
+   // f.getProbabilityWithnNo("job");
+  // System.out.println(fa.countAllYes());
+   //System.out.println(fa.countAllYes());
+   // System.out.println(f.getProbabilityWithYes("job")+" "+ f.getProbabilityWithnNo("job")+ "  yes  " + f.probabilityOfYes() +"no" + f.probabilityOfNO()  );
 //}
+*/
     }
     
 }

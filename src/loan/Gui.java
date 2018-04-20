@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author moh
+ * @author virus
  */
 public class Gui extends JFrame  {
       private JComboBox jobCombo; 
@@ -50,16 +50,16 @@ private String decision ;
   this.jobCombo =  new JComboBox(this.job);
   this.maritalCombo = new JComboBox(this.marital);
   this.educationCombo = new JComboBox(this.education);
-   this.housingCombo = new JComboBox(this.housing);
-   this.btn = new JButton("submit");
-   this.label = new JLabel();
+  this.housingCombo = new JComboBox(this.housing);
+  this.btn = new JButton("submit");
+  this.label = new JLabel();
 
   panel.add(jobCombo);
   panel.add(maritalCombo);
-   panel.add(educationCombo);
-      panel.add(housingCombo);
-panel.add(btn);
-panel.add(label);
+  panel.add(educationCombo);
+  panel.add(housingCombo);
+  panel.add(btn);
+  panel.add(label);
 
 
 btn.addActionListener(new ActionListener() {
@@ -98,25 +98,9 @@ btn.addActionListener(new ActionListener() {
      
      
      String outcome = c.predict(decision_yes, decision_no);
-     
-    
-    
-    
-      
+  
      label.setText(outcome);
     System.out.println( " yes = " +decision_yes +" no = "+ decision_no  +" lable ="+ outcome );
-
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
            
             }
         });

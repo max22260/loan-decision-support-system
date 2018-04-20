@@ -17,10 +17,15 @@ public class Features {
      private List<DataSet> all_features ; // all features and label
      private String name ; // name of the feature that i want to extract 
      public int counter ;
-    public Features(List<DataSet> all_features, String name) {
+   
+     
+     
+     public Features(List<DataSet> all_features, String name) {
         this.all_features = all_features;
         this.name = name;
     }
+     
+     
     public List<SeperateFeatures> getFeature(){
      int count = 0 ; 
         List<SeperateFeatures> list = new ArrayList<SeperateFeatures>();
@@ -35,6 +40,8 @@ public class Features {
     
       return list;
     }
+    
+    
      public int countAllYes(){
          int count = 0 ; 
        for (DataSet d : all_features){
@@ -45,6 +52,7 @@ public class Features {
        }
        return count ; 
      }
+     
       public int countAllNo(){
          int count = 0 ; 
        for (DataSet d : all_features){

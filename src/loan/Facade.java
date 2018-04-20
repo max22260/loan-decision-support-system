@@ -21,15 +21,11 @@ public class Facade {
    public  double counter ;// yes , whatever 
     public Facade (String yes_or_no,String feature_name){
 
-        FileReader file = new FileReader("C:\\Users\\max22\\Desktop\\bank-full.csv");
-
-        
-
-        
-     this.list =   file.readCsvFile();
+      FileReader file = new FileReader("/home/max/Desktop/new/new.csv");
+        this.list =   file.readCsvFile();
         this.f =new Features(this.list, feature_name);
-         this.l =f.getFeature();
-         this.counter= file.counter;
+        this.l =f.getFeature();
+        this.counter= file.counter;
         this.atrr = new Attributes(yes_or_no, (ArrayList<SeperateFeatures>) this.l);
     }
     public HashMap<String,Integer> getYesOrNo(){

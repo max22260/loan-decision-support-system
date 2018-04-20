@@ -11,9 +11,14 @@ import java.util.HashMap;
 /**
  *
  * @author moh
- */
+ *///
 public class Attributes {
+   
+    // yes  , " 
+    
     private HashMap<String,Integer> h  =new HashMap();
+    
+    
     public Attributes (String call_yes_or_no,ArrayList<SeperateFeatures> givenArray){
        if (call_yes_or_no.equals("yes")){
           this.h=  countElementsWithYes(givenArray);
@@ -23,6 +28,8 @@ public class Attributes {
            System.out.println("something is not right");
        }
     }
+    
+    
      private  HashMap<String, Integer> countElementsWithYes(ArrayList<SeperateFeatures> givenArray) {
         
         HashMap<String, Integer> count = new HashMap<String, Integer>();
@@ -40,6 +47,8 @@ public class Attributes {
         //System.out.println(count.keySet()+" "+count.values());
         return count;
     }
+     
+     
       private  HashMap<String, Integer> countFeatures(ArrayList<SeperateFeatures> givenArray) {
         
         HashMap<String, Integer> count = new HashMap<String, Integer>();
@@ -57,6 +66,7 @@ public class Attributes {
         //System.out.println(count.keySet()+" "+count.values());
         return count;
     }
+      
  private  HashMap<String, Integer> countElementsWithNo(ArrayList<SeperateFeatures> givenArray) {
         
         HashMap<String, Integer> count = new HashMap<String, Integer>();
@@ -74,6 +84,7 @@ public class Attributes {
       //  System.out.println(count.keySet()+" "+count.values());
         return count;
     }
+ 
   public HashMap<String,Integer> getHash(){
       return this.h;    // this returns each attribute of the feature and it's count with yes or no that i gave it to the facade function in the first place 
   }

@@ -16,12 +16,18 @@ import java.util.List;
 public class FileReader {
  private String fileName;
  
- public  double  counter =1 ;
+ public  double  counter =0 ;
     
+
+
  public FileReader (String fileName){
         this.fileName = fileName;
     }
-     public  List<DataSet> readCsvFile(){
+     
+ 
+ 
+ 
+ public  List<DataSet> readCsvFile(){
         //Delimiters used in the CSV file
      String COMMA_DELIMITER = ",";
      int count = 0 ;
@@ -46,7 +52,7 @@ public class FileReader {
                 if(dataSet.length > 0 )
                 {
                     //Save the  dataSet  in  object
-                    DataSet emp = new DataSet(Integer.parseInt(dataSet[0]),
+                    DataSet emp = new DataSet(dataSet[0],
                             dataSet[1],dataSet[2],
                           dataSet[3],dataSet[4],dataSet[5]);
                     data.add(emp);

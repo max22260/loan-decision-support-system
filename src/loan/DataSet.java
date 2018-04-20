@@ -10,14 +10,14 @@ package loan;
  * @author moh
  */
 public class DataSet {
-    public int age ; 
+    public String age ; 
     public String job ; 
     public String marital ; 
     public String education ; 
      public String housing; 
       public String label ;
      
-    public DataSet(int age, String job, String marital, String education, String housing, String label) {
+    public DataSet(String age, String job, String marital, String education, String housing, String label) {
         this.age = age;
         this.job = job;
         this.marital = marital;

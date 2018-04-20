@@ -11,14 +11,17 @@ import java.util.Map;
 
 /**
  *
- * @author moh
+ * @author virus 
  */
 public class FeatureProbability {
    
-   Facade f  = new Facade("yes", "job");
+   Facade f  = new Facade("yes", "");
    double counter = f.returncounter() ;
     
-    public HashMap<String,Double> getProbabilityWithYes(String name ){
+   
+   
+   public HashMap<String,Double> getProbabilityWithYes(String name ){
+       
        HashMap<String,Double> probabilityYes = new HashMap();
        
         Facade fa = new Facade("yes",name );
@@ -39,7 +42,7 @@ public class FeatureProbability {
        // System.out.println(pair.getKey() + " = " + pair.getValue());
         it.remove(); // avoids a ConcurrentModificationException
     }
-       // System.out.println(probabilityYes);
+       //System.out.println(" porbabilty with yes  ---->"+probabilityYes);
         return probabilityYes;
         
     }
@@ -51,7 +54,7 @@ public class FeatureProbability {
         String  fes ;
         String temp ;
         double some = 0 ;
-        double countyes =fa.countAllYes();
+        double countno =fa.countAllNo();
         
       HashMap<String,Integer> h = fa.getYesOrNo();
        Iterator it = h.entrySet().iterator();
@@ -59,12 +62,12 @@ public class FeatureProbability {
         Map.Entry pair = (Map.Entry)it.next();
         fes = (String) pair.getKey();
         temp = pair.getValue().toString();
-        some = Double.parseDouble(temp)/countyes;
+        some = Double.parseDouble(temp)/countno;
         probabilityNo.put(fes, some);
        // System.out.println(pair.getKey() + " = " + pair.getValue());
         it.remove(); // avoids a ConcurrentModificationException
     }
-        //System.out.println(probabilityNo+" "+ counter);
+      //  System.out.println(probabilityNo+" "+ counter);
         return probabilityNo;
         
     }
